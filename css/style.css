@@ -1,3 +1,227 @@
-.hidden{
-    display: none;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: #fff;
+}
+.container input[type=text] {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 25px 20px;
+  opacity: 0.8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+.container button {
+  outline: none;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  padding: 5px 2px;
+  cursor: pointer;
+  font-weight: 800;
+}
+.container .top-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgb(41, 39, 39), transparent);
+}
+.container .top-content #clock {
+  margin: 10px 20px;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 4px 4px 0px #79eacb, 8px 8px 0px rgb(41, 39, 39);
+}
+.container .top-content #weather {
+  margin: 5px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container #login-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #login-form button {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.container #greeting {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  position: relative;
+}
+.container #greeting::after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #79eacb;
+  opacity: 0.3;
+}
+.container #todo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container #todo-container #todo-form {
+  width: 100%;
+}
+.container #todo-container #todo-form input[type=text] {
+  width: 50%;
+}
+.container #todo-container #todo-list {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 90%;
+}
+.container #todo-container #todo-list li {
+  font-size: 20px;
+  width: 50%;
+  position: relative;
+  word-break: break-all;
+  line-height: 1.6;
+}
+.container #todo-container #todo-list li span {
+  position: relative;
+  border-bottom: 1px solid #fff;
+}
+.container #todo-container #todo-list li span::before {
+  position: absolute;
+  content: "✨";
+  left: -28px;
+  top: 4px;
+}
+.container #todo-container #todo-list li button {
+  margin-left: 10px;
+  border: none;
+}
+.container #quote {
+  margin: 0 30px;
+  padding: 10px 20px;
+  background: rgba(59, 59, 59, 0.533);
+  border-radius: 20px;
+  line-height: 1.4;
+  position: absolute;
+  bottom: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #quote > span {
+  position: relative;
+}
+.container #quote > span:first-child {
+  font-weight: 800;
+}
+.container #quote > span:last-child {
+  font-size: 17px;
+  margin-top: 7px;
+}
+.container #quote > span:last-child::before {
+  position: absolute;
+  content: "-";
+  left: -10px;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
